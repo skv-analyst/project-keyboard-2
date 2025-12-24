@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h> // <--- ОБЯЗАТЕЛЬНО: Подключаем мышь
+#include <dt-bindings/zmk/mouse.h>
 
 #define BASE 0
 #define NAV  1
@@ -23,16 +23,16 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // Настройка плавности мыши (опционально, но рекомендуется)
+        // Настройки плавности мыши
         mmv {
-            acceleration-exponent = <1>;      // 1 = linear, 2 = quadratic
-            time-to-max-speed-ms = <500>;    // time to reach max speed
-            delay-ms = <0>;                   // input delay
+            acceleration-exponent = <1>;
+            time-to-max-speed-ms = <500>;
+            delay-ms = <0>;
         };
         msc {
-            acceleration-exponent = <1>;      // 0 = no acceleration, 1 = linear
-            time-to-max-speed-ms = <500>;    // time to reach max speed
-            delay-ms = <0>;                   // input delay
+            acceleration-exponent = <1>;
+            time-to-max-speed-ms = <500>;
+            delay-ms = <0>;
         };
     };
 
@@ -47,10 +47,8 @@
 &none    &kp Q         &kp W        &kp E        &kp R          &kp T                                         &kp Y                &kp U          &kp I        &kp O        &kp P            &kp LBKT
 &none    &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                         &kp H                &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
 &none    &kp Z         &kp X        &kp C        &kp V          &kp B                &kp C_MUTE    &none      &kp N                &kp M          &kp COMMA    &kp DOT      &kp FSLH         &none
-                       &none        &kp ESC      &lt MOUSE TAB  &lt NAV LC(SPACE)    &kp SPACE     &kp ENTER  &lt SYM LG(SPACE)    &kp BSPC       &lt MOUSE LCLK &lt MOUSE RCLK // <-- Для удобства добавил клики и сюда, но основные на слое MOUSE
+                       &none        &kp ESC      &lt MOUSE TAB  &lt NAV LC(SPACE)    &kp SPACE     &kp ENTER  &lt SYM LG(SPACE)    &kp BSPC       &none        &none
             >;
-            // Примечание: В последней строке я оставил твои старые биндинги справа,
-            // но для MOUSE слоя мы переопределим их внутри слоя.
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -61,17 +59,15 @@
 &trans   &trans  &trans  &trans  &trans  &trans                             &trans         &trans     &trans     &trans     &trans     &trans
 &trans   &trans  &trans  &trans  &trans  &trans                             &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
 &trans   &trans  &trans  &trans  &trans  &trans                             &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans   &trans  &trans  &trans  &trans  &trans     &trans        &trans    &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans   &trans  &trans  &trans  &trans  &trans     &trans        &trans    &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
                  &trans  &trans  &trans  &trans     &trans        &trans    &trans         &trans     &trans     &trans
             >;
         };
 
         // === 2. MOUSE LAYER ===
-        // Активируется удержанием TAB (левая рука)
         mouse_layer {
             display-name = "mouse";
             bindings = <
-// LEFTHAND: TRANS (Работают HRM с базы)
 &trans   &trans  &trans  &trans  &trans  &trans                             &trans         &trans     &trans     &trans     &trans     &trans
 &trans   &trans  &trans  &trans  &trans  &trans                             &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
 &trans   &trans  &trans  &trans  &trans  &trans                             &trans         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans
@@ -84,11 +80,12 @@
         sym_layer {
             display-name = "symbols";
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
-&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
-&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
-&trans   &trans  &trans  &trans  &trans  &trans     &trans        &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                 &trans  &trans  &trans  &trans     &trans        &trans    &trans    &trans    &trans    &trans
+// LEFT HAND: Math & Numpad                                          // RIGHT HAND: Python/SQL Syntax
+&trans     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK              &trans     &trans    &trans    &trans    &trans     &trans
+&trans     &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH              &kp LBRC   &kp RBRC  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
+&trans     &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp COLON              &kp UNDER  &kp LPAR  &kp RPAR  &kp COLON &kp SEMI   &trans
+&trans     &kp N0     &kp DOT &trans  &trans  &trans    &trans &trans &kp DQT   &kp SQT   &trans    &trans    &trans     &trans
+                      &trans  &trans  &trans  &kp N0    &trans &trans &trans    &trans    &trans    &trans
             >;
         };
     };
