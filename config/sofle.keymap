@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -7,6 +9,7 @@
 
 / {
     behaviors {
+        // Твои настройки HRM
         hrm: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MOD";
@@ -22,6 +25,7 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // === 0. BASE LAYER (Твой утвержденный вариант) ===
         default_layer {
             display-name = "default";
             bindings = <
@@ -29,41 +33,34 @@
 &none    &kp Q         &kp W        &kp E        &kp R          &kp T                                         &kp Y                &kp U          &kp I        &kp O        &kp P            &kp LBKT
 &none    &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                         &kp H                &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
 &none    &kp Z         &kp X        &kp C        &kp V          &kp B                &kp C_MUTE    &none      &kp N                &kp M          &kp COMMA    &kp DOT      &kp FSLH         &none
-                       &none        &kp ESC      &kp TAB        &lt (NAV) LC(SPACE)  &kp SPACE     &kp ENTER  &lt (SYM) LG(SPACE)  &kp BSPC       &none        &none
+                       &none        &kp ESC      &kp TAB        &lt NAV LC(SPACE)    &kp SPACE     &kp ENTER  &lt SYM LG(SPACE)    &kp BSPC       &none        &none
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        // === 1. NAVIGATION LAYER ===
+        // Активируется удержанием LC(SPACE) левой рукой (как у тебя в базе)
         nav_layer {
             display-name = "navigation";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+// LEFTHAND: TRANS (Пропускаем нажатия, чтобы работали HRM с базы)
+&trans   &trans  &trans  &trans  &trans  &trans                             &trans         &trans     &trans     &trans     &trans     &trans
+&trans   &trans  &trans  &trans  &trans  &trans                             &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
+&trans   &trans  &trans  &trans  &trans  &trans                             &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans   &trans  &trans  &trans  &trans  &trans     &trans        &trans    &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+                 &trans  &trans  &trans  &trans     &trans        &trans    &trans         &trans     &trans     &trans
             >;
         };
 
+        // === 2. SYMBOLS LAYER (Заглушка) ===
         sym_layer {
             display-name = "symbols";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
+&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
+&trans   &trans  &trans  &trans  &trans  &trans                             &trans    &trans    &trans    &trans    &trans    &trans
+&trans   &trans  &trans  &trans  &trans  &trans     &trans        &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                 &trans  &trans  &trans  &trans     &trans        &trans    &trans    &trans    &trans    &trans
             >;
         };
     };
