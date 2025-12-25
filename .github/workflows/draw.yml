@@ -6,7 +6,6 @@ on:
       - "config/*.keymap"
       - "keymap_drawer.config.yaml"
 
-# Даем права скрипту сохранять картинку обратно в твой репозиторий
 permissions:
   contents: write
 
@@ -16,15 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Важно для корректной работы git commit
+          fetch-depth: 0
 
       - name: Draw keymap
-        uses: caksoylar/keymap-drawer-action@v0.4.0
+        uses: caksoylar/keymap-drawer@main
         with:
           kmap_filename: config/sofle.keymap
           config_path: keymap_drawer.config.yaml
           output_folder: keymap-drawer
-          install_dependencies: "zmk" # Нужно, чтобы он понял специфику ZMK
+          parse_args: "--base-keymap zmk"
 
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v5
