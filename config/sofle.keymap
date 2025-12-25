@@ -1,8 +1,6 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -13,6 +11,7 @@
 / {
     behaviors {
         // Home Row Mods
+
         hrm: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MOD";
@@ -25,6 +24,7 @@
         };
 
         // Настройки мыши (Mouse Move)
+
         mmv {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <500>;
@@ -32,6 +32,7 @@
         };
 
         // Настройки скролла (Mouse Scroll)
+
         msc {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <500>;
@@ -43,19 +44,22 @@
         compatible = "zmk,keymap";
 
         // === 0. BASE LAYER ===
+
         default_layer {
             display-name = "default";
             bindings = <
-&kp ESC  &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                                        &kp N6               &kp N7         &kp N8       &kp N9       &kp N0           &kp MINUS
-&none    &kp Q         &kp W        &kp E        &kp R          &kp T                                         &kp Y                &kp U          &kp I        &kp O        &kp P            &kp LBKT
-&none    &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                         &kp H                &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
-&none    &kp Z         &kp X        &kp C        &kp V          &kp B                &kp C_MUTE    &none      &kp N                &kp M          &kp COMMA    &kp DOT      &kp FSLH         &none
-                       &none        &kp ESC      &lt MOUSE TAB  &lt NAV LC(SPACE)    &kp SPACE     &kp ENTER  &lt SYM LG(SPACE)    &kp BSPC       &none        &none
+&kp ESC  &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                                        &kp N6             &kp N7         &kp N8       &kp N9       &kp N0           &kp MINUS
+&none    &kp Q         &kp W        &kp E        &kp R          &kp T                                         &kp Y              &kp U          &kp I        &kp O        &kp P            &kp LBKT
+&none    &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                         &kp H              &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
+&none    &kp Z         &kp X        &kp C        &kp V          &kp B                &kp C_MUTE    &none      &kp N              &kp M          &kp COMMA    &kp DOT      &kp FSLH         &none
+                       &none        &kp ESC      &lt MOUSE TAB  &lt (NAV) LC(SPACE)  &kp SPACE     &kp ENTER  &lt SYM BACKSPACE  &none          &none        &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         // === 1. NAVIGATION LAYER ===
+
         nav_layer {
             display-name = "navigation";
             bindings = <
@@ -68,6 +72,7 @@
         };
 
         // === 2. MOUSE LAYER ===
+
         mouse_layer {
             display-name = "mouse";
             bindings = <
@@ -79,7 +84,8 @@
             >;
         };
 
-        // === 3. SYMBOLS LAYER (Analyst Mode) ===
+        // === 3. SYMBOLS LAYER ===
+
         sym_layer {
             display-name = "symbols";
             bindings = <
