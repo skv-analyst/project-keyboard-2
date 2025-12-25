@@ -8,17 +8,9 @@
 
 [![Keymap Layout](keymap-drawer/sofle.svg)](keymap-drawer/sofle.svg)
 
----
-
-### 🗺 Легенда слоев
-
-1.  **BASE**: Классика + Home Row Mods (Hold `A/S/D/F` for Mods).
-2.  **NAV**: VIM-стиль (`HJKL`) + буфер обмена (`Cmd+C/V`). Активация: `Left Ctrl (Hold)`.
-3.  **MOUSE**: Эмуляция мыши и скролла. Активация: `Left Tab (Hold)`.
-4.  **SYM**: Analyst Mode (Numpad слева + Python синтаксис справа). Активация: `Right Gui (Hold)`.
 
 ### 🚀 Как обновить схему локально
 
 ```bash
-./draw.shyer_04.png)
+./draw.sh
 ```
