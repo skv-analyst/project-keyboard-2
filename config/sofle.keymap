@@ -86,7 +86,7 @@
 
         // === 3. NUMBERS LAYER ===
 
-        sym_layer {
+        num_layer {
             display-name = "numbers";
             bindings = <
 &none  &none      &none   &none   &none   &none                        &none      &none     &none     &none      &none      &none
