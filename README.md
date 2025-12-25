@@ -6,7 +6,9 @@
 
 Эта схема генерируется автоматически из кода прошивки
 
-[![Keymap Layout](keymap-drawer/sofle.svg)](keymap-drawer/sofle.svg)
+<p align="center">
+  <img src="keymap-drawer/sofle.svg" alt="Keymap Layout" width="100%">
+</p>
 
 
 ### 🚀 Как обновить схему локально
