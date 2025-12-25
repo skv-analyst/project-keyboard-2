@@ -1,22 +1,16 @@
-physical_layout:
-  qmk_keyboard: sofle/rev1    # Используем стандартную геометрию Sofle
-  layout_name: LAYOUT
-
 draw_config:
   key_w: 60
   key_h: 56
   split_gap: 30.0
-  n_columns: 1                # Рисовать слои один под другим (вертикально)
+  n_columns: 1
 
 parse_config:
-  # Самое важное: объясняем парсеру твои дефайны, как в Си коде
   zmk_preamble: |
     #define BASE 0
     #define NAV  1
     #define MOUSE 2
     #define SYM  3
 
-  # Улучшаем подписи (чтобы вместо &kp LSHIFT писалось просто Sft)
   raw_binding_map:
     "&kp ESC": "ESC"
     "&kp BSLH": "\\"

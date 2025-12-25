@@ -1,14 +1,24 @@
 # ⌨️ Sofle ZMK Config
 
+Построена на базе **Miryoku**, но адаптирована под физическую раскладку Sofle.
 
-### 0. Base Layer
-![Base Layer](src/img/layer_01.png)
+### ✨ Актуальная схема слоев
 
-### 1. Navigation Layer (Left Space)
-![Navigation Layer](src/img/layer_02.png)
+Эта схема генерируется автоматически из кода прошивки
 
-### 2. Mouse Layer (Left Tab)
-![Mouse Layer](src/img/layer_03.png)
+[![Keymap Layout](keymap-drawer/sofle.svg)](keymap-drawer/sofle.svg)
 
-### 3. Symbols Layer (Right Space)
-![Symbols Layer](src/img/layer_04.png)
+---
+
+### 🗺 Легенда слоев
+
+1.  **BASE**: Классика + Home Row Mods (Hold `A/S/D/F` for Mods).
+2.  **NAV**: VIM-стиль (`HJKL`) + буфер обмена (`Cmd+C/V`). Активация: `Left Ctrl (Hold)`.
+3.  **MOUSE**: Эмуляция мыши и скролла. Активация: `Left Tab (Hold)`.
+4.  **SYM**: Analyst Mode (Numpad слева + Python синтаксис справа). Активация: `Right Gui (Hold)`.
+
+### 🚀 Как обновить схему локально
+
+```bash
+./draw.shyer_04.png)
+```
