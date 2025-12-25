@@ -1,0 +1,33 @@
+name: Draw Keymap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/*.keymap"
+      - "keymap_drawer.config.yaml"
+
+# Даем права скрипту сохранять картинку обратно в твой репозиторий
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Важно для корректной работы git commit
+
+      - name: Draw keymap
+        uses: caksoylar/keymap-drawer-action@v0.4.0
+        with:
+          kmap_filename: config/sofle.keymap
+          config_path: keymap_drawer.config.yaml
+          output_folder: keymap-drawer
+          install_dependencies: "zmk" # Нужно, чтобы он понял специфику ZMK
+
+      - name: Commit updated images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update keymap svg [skip ci]"
+          file_pattern: keymap-drawer/*.svg
