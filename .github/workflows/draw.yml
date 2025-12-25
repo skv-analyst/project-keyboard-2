@@ -1,10 +1,11 @@
 name: Draw Keymap
 on:
-  workflow_dispatch:
-  push:
+  workflow_dispatch:  # Кнопка ручного запуска
+  push:               # Автозапуск при пуше
     paths:
       - "config/*.keymap"
       - "keymap_drawer.config.yaml"
+      - ".github/workflows/draw.yml"
 
 permissions:
   contents: write
@@ -18,7 +19,8 @@ jobs:
           fetch-depth: 0
 
       - name: Draw keymap
-        uses: caksoylar/keymap-drawer@main
+        # ИСПОЛЬЗУЕМ ПРАВИЛЬНЫЙ РЕПОЗИТОРИЙ И ВЕРСИЮ
+        uses: caksoylar/keymap-drawer-action@v0.3.0
         with:
           kmap_filename: config/sofle.keymap
           config_path: keymap_drawer.config.yaml
