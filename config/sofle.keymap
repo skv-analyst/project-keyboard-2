@@ -64,7 +64,7 @@
             display-name = "navigation";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans     &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
+&trans  &kp LG(LC(LA(5))) &kp LG(LC(LA(4))) &kp LG(LC(LA(3))) &kp LG(LC(LA(2))) &kp LG(LC(LA(1)))                   &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans     &trans     &trans
