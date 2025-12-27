@@ -29,8 +29,6 @@ parse_config:
     "&kp TAB": "Tab"
     "&kp ENTER": "Enter"
     "&kp SPACE": "␣"
-    "&trans": ""
-    "&none": ""
 
     # === ШОРТКАТЫ (MAC OS) ===
     "&kp LG(LS(Z))": "Redo"
@@ -65,13 +63,6 @@ parse_config:
     "&mkp LCLK": "L Click"
     "&mkp RCLK": "R Click"
     "&mkp MCLK": "M Click"
-
-    # === ЗАПУСК ПРИЛОЖЕНИЙ (Nav Layer) ===
-    "&kp LG(LC(LA(N1)))": "App 1"
-    "&kp LG(LC(LA(N2)))": "App 2"
-    "&kp LG(LC(LA(N3)))": "App 3"
-    "&kp LG(LC(LA(N4)))": "App 4"
-    "&kp LG(LC(LA(N5)))": "App 5"
 
     # === БУКВЫ (EN RU) ===
     "&kp Q": "Q Й"
