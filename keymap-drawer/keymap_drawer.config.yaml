@@ -3,25 +3,75 @@ draw_config:
   key_h: 56
   split_gap: 30.0
   n_columns: 1
+  dark_mode: auto
 
 parse_config:
   zmk_preamble: |
     #define BASE 0
-    #define NAV 1
+    #define NAV  1
     #define MOUSE 2
-    #define NUM 3
+    #define NUM  3
+    #define SYM  4
 
   raw_binding_map:
     "&kp ESC": "ESC"
+    "&kp BSPC": "⌫"
+    "&kp DEL": "DEL"
+    "&kp LSHIFT": "Shift"
+    "&kp RSHIFT": "Shift"
+    "&kp LCTRL": "Ctrl"
+    "&kp RCTRL": "Ctrl"
+    "&kp LALT": "Alt"
+    "&kp RALT": "Alt"
+    "&kp LGUI": "Gui"
+    "&kp RGUI": "Gui"
+    "&kp TAB": "Tab"
+    "&kp ENTER": "Enter"
+    "&kp SPACE": "␣"
+
+    # === БУКВЫ (EN RU) ===
+    "&kp Q": "Q Й"
+    "&kp W": "W Ц"
+    "&kp E": "E У"
+    "&kp R": "R К"
+    "&kp T": "T Е"
+    "&kp Y": "Y Н"
+    "&kp U": "U Г"
+    "&kp I": "I Ш"
+    "&kp O": "O Щ"
+    "&kp P": "P З"
+    "&kp A": "A Ф"
+    "&kp S": "S Ы"
+    "&kp D": "D В"
+    "&kp F": "F А"
+    "&kp G": "G П"
+    "&kp H": "H Р"
+    "&kp J": "J О"
+    "&kp K": "K Л"
+    "&kp L": "L Д"
+    "&kp Z": "Z Я"
+    "&kp X": "X Ч"
+    "&kp C": "C С"
+    "&kp V": "V М"
+    "&kp B": "B И"
+    "&kp N": "N Т"
+    "&kp M": "M Ь"
+
+    # === ЗНАКИ ПРЕПИНАНИЯ ===
+    "&kp LBKT": "[ Х"
+    "&kp RBKT": "] Ъ"
+    "&kp SEMI": "; Ж"
+    "&kp SQT": "' Э"
+    "&kp COMMA": ", Б"
+    "&kp DOT": ". Ю"
+    "&kp FSLH": "/ ."
     "&kp BSLH": "\\"
-    "&kp SQT": "'"
-    "&kp SEMI": ";"
-    "&kp LBKT": "["
-    "&kp RBKT": "]"
-    "&kp MINUS": "-"
-    "&kp EQUAL": "="
-    "&kp GRAVE": "`"
-    "&kp TILDE": "~"
+    "&kp GRAVE": "` Ё"
+    "&kp MINUS": "- _"
+    "&kp EQUAL": "= +"
+    "&kp LEFT_BRACKET": "[ Х"
+
+    # === СИМВОЛЫ ===
     "&kp EXCL": "!"
     "&kp AT": "@"
     "&kp HASH": "#"
@@ -42,5 +92,7 @@ parse_config:
     "&kp LT": "<"
     "&kp GT": ">"
     "&kp QMARK": "?"
+
+    # === СИСТЕМНЫЕ ===
     "&bootloader": "BOOT"
     "&sys_reset": "RESET"
