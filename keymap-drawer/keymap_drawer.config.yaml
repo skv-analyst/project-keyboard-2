@@ -14,6 +14,7 @@ parse_config:
     #define SYM  4
 
   raw_binding_map:
+    # === БАЗОВЫЕ КЛАВИШИ ===
     "&kp ESC": "ESC"
     "&kp BSPC": "⌫"
     "&kp DEL": "DEL"
@@ -28,6 +29,49 @@ parse_config:
     "&kp TAB": "Tab"
     "&kp ENTER": "Enter"
     "&kp SPACE": "␣"
+    "&trans": ""
+    "&none": ""
+
+    # === ШОРТКАТЫ (MAC OS) ===
+    "&kp LG(LS(Z))": "Redo"
+    "&kp LG(V)": "Paste"
+    "&kp LG(C)": "Copy"
+    "&kp LG(X)": "Cut"
+    "&kp LG(Z)": "Undo"
+    "&kp CAPSLOCK": "Caps"
+    "&kp INS": "Insert"
+    "&kp HOME": "Home"
+    "&kp END": "End"
+    "&kp PG_UP": "PgUp"
+    "&kp PG_DN": "PgDn"
+    "&kp LEFT": "←"
+    "&kp DOWN": "↓"
+    "&kp UP": "↑"
+    "&kp RIGHT": "→"
+
+    # === МЫШЬ (ДВИЖЕНИЕ) ===
+    "&mmv MOVE_LEFT": "Ms ←"
+    "&mmv MOVE_DOWN": "Ms ↓"
+    "&mmv MOVE_UP": "Ms ↑"
+    "&mmv MOVE_RIGHT": "Ms →"
+
+    # === МЫШЬ (СКРОЛЛ) ===
+    "&msc SCRL_LEFT": "Scr ←"
+    "&msc SCRL_DOWN": "Scr ↓"
+    "&msc SCRL_UP": "Scr ↑"
+    "&msc SCRL_RIGHT": "Scr →"
+
+    # === МЫШЬ (КЛИКИ) ===
+    "&mkp LCLK": "L Click"
+    "&mkp RCLK": "R Click"
+    "&mkp MCLK": "M Click"
+
+    # === ЗАПУСК ПРИЛОЖЕНИЙ (Nav Layer) ===
+    "&kp LG(LC(LA(N1)))": "App 1"
+    "&kp LG(LC(LA(N2)))": "App 2"
+    "&kp LG(LC(LA(N3)))": "App 3"
+    "&kp LG(LC(LA(N4)))": "App 4"
+    "&kp LG(LC(LA(N5)))": "App 5"
 
     # === БУКВЫ (EN RU) ===
     "&kp Q": "Q Й"
