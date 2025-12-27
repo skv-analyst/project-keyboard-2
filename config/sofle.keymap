@@ -40,6 +40,24 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        // Комбо для Твердого знака (O + P)
+        combo_hard_sign {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // Индексы клавиш O и P на Sofle
+            bindings = <&kp RBKT>;
+        };
+
+        // Комбо для Э (W + E)
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <14 15>; // Индексы клавиш W и E
+            bindings = <&kp SQT>;    // SQT дает 'Э' в русской раскладке
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,11 +81,11 @@
         nav_layer {
             display-name = "navigation";
             bindings = <
-&none  &none  &none   &none   &none   &none                             &none          &none      &none      &none      &none      &none
-&none  &none  &none   &none   &none   &kp APOSTROPHE                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &none  &none   &none   &none   &none                             &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none  &none   &none   &none   &none           &trans    &trans  &none          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-              &trans  &trans  &trans  &trans          &trans    &trans  &trans         &trans     &trans     &trans
+&none  &none   &none   &none   &none   &none                             &none          &none      &none      &none      &none      &none
+&none  &none   &none   &none   &none   &kp APOSTROPHE                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
+&none  &trans  &trans  &trans  &trans  &none                             &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none   &none   &none   &none   &none           &trans    &trans  &none          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+               &trans  &trans  &trans  &trans          &trans    &trans  &trans         &trans     &trans     &trans
             >;
         };
 
@@ -76,11 +94,11 @@
         mouse_layer {
             display-name = "mouse";
             bindings = <
-&none  &none  &none   &none   &none   &none                        &none          &none           &none           &none           &none            &none
-&none  &none  &none   &none   &none   &none                        &kp LG(LS(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)       &kp LG(Z)        &none
-&none  &none  &none   &none   &none   &none                        &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
-&none  &none  &none   &none   &none   &none   &trans    &trans     &none          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-              &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK      &trans          &trans          &trans
+&none  &none   &none   &none   &none   &none                        &none          &none           &none           &none           &none            &none
+&none  &none   &none   &none   &none   &none                        &kp LG(LS(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)       &kp LG(Z)        &none
+&none  &trans  &trans  &trans  &trans  &none                        &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
+&none  &none   &none   &none   &none   &none   &trans    &trans     &none          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+               &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK      &trans          &trans          &trans
             >;
         };
 
