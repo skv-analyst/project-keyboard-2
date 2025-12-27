@@ -5,3 +5,6 @@
 
 ## ✨ Актуальная схема слоев
 
+<p align="center">
+  <img src="keymap-drawer/sofle.svg" alt="Keymap Layout" width="100%">
+</p>
