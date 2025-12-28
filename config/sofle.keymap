@@ -89,11 +89,11 @@
         num_layer {
             display-name = "numbers";
             bindings = <
-&none  &none      &none   &none   &none   &none                        &none          &none      &none      &none      &none      &none
-&none  &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                     &trans         &trans     &trans     &trans     &trans     &none
-&none  &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT  &trans    &trans  &none          &none      &none      &none      &none      &none
-                  &trans  &trans  &trans  &kp N0     &trans    &trans  &trans         &trans     &trans     &trans
+&none  &none         &none   &none   &none   &none                        &none          &none      &none      &none      &none      &none
+&none  &kp PLUS      &kp N7  &kp N8  &kp N9  &kp ASTRK                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
+&none  &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                     &trans         &trans     &trans     &trans     &trans     &none
+&none  &kp KP_EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT  &trans    &trans  &none          &none      &none      &none      &none      &none
+                     &trans  &trans  &trans  &kp N0     &trans    &trans  &trans         &trans     &trans     &trans
             >;
         };
     };
