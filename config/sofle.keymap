@@ -1,8 +1,6 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -13,6 +11,7 @@
 / {
     behaviors {
         // Home Row Mods (Твои настройки таймингов)
+
         hrm: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MOD";
@@ -25,6 +24,7 @@
         };
 
         // Плавность мыши
+
         mmv {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <500>;
@@ -32,6 +32,7 @@
         };
 
         // Скролл
+
         msc {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <500>;
@@ -43,52 +44,56 @@
         compatible = "zmk,keymap";
 
         // === 0. BASE LAYER ===
+
         default_layer {
             display-name = "default";
             bindings = <
-                &none    &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                                          &kp N6          &kp N7          &kp N8       &kp N9       &kp N0           &none
-                &none    &kp Q         &kp W        &kp E        &kp R          &kp T                                           &kp Y           &kp U           &kp I        &kp O        &kp P            &kp LBKT
-                &none    &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                           &kp H           &hrm LSHIFT J   &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
-                &none    &kp Z         &kp X        &kp C        &kp V          &kp B           &kp C_MUTE      &none           &kp N           &kp M           &kp COMMA    &kp DOT      &kp FSLH         &none
-                                       &none        &kp ESCAPE   &kp LC(SPACE)  &lt MOUSE TAB   &lt NAV SPACE   &lt NUM ENTER   &kp  BSPC       &kp DELETE      &none        &none
+&none  &none         &none        &none        &none          &none                                          &none     &none          &none        &none        &none            &none
+&none  &kp Q         &kp W        &kp E        &kp R          &kp T                                          &kp Y     &kp U          &kp I        &kp O        &kp P            &kp LBKT
+&none  &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                          &kp H     &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
+&none  &kp Z         &kp X        &kp C        &kp V          &kp B          &kp C_MUTE       &none          &kp N     &kp M          &kp COMMA    &kp DOT      &kp FSLH         &none
+                     &none        &kp ESCAPE   &kp LC(SPACE)  &lt MOUSE TAB  &lt NAV SPACE    &lt NUM ENTER  &kp BSPC  &kp DEL        &none        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         // === 1. NAVIGATION LAYER ===
+
         nav_layer {
             display-name = "navigation";
             bindings = <
-                &trans     &none   &none   &none   &none   &none                                &none          &none      &none      &none      &none      &none
-                &trans     &none   &none   &none   &none   &none                                &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-                &trans     &trans  &trans  &trans  &trans  &none                                &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-                &trans     &none   &none   &none   &none   &none        &trans    &trans        &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
-                                   &trans  &trans  &trans  &trans       &trans    &trans        &trans         &trans     &trans     &trans
+&none  &none   &none   &none   &none   &none                     &none          &none      &none      &none      &none      &none
+&none  &none   &none   &none   &none   &none                     &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
+&none  &trans  &trans  &trans  &trans  &none                     &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none   &none   &none   &none   &none   &trans    &trans  &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+               &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans     &trans     &trans
             >;
         };
 
         // === 2. MOUSE LAYER ===
+
         mouse_layer {
             display-name = "mouse";
             bindings = <
-                &trans     &none   &none   &none   &none   &none                                &none          &none           &none           &none           &none            &none
-                &trans     &none   &none   &none   &none   &none                                &kp LG(LS(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)       &kp LG(Z)        &none
-                &trans     &trans  &trans  &trans  &trans  &none                                &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
-                &trans     &none   &none   &none   &none   &none        &trans     &trans       &none          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans
-                                   &trans  &trans  &trans  &trans       &trans     &mkp LCLK    &mkp RCLK      &trans          &trans          &trans
+&none  &none   &none   &none   &none   &none                        &none          &none           &none           &none           &none            &none
+&none  &none   &none   &none   &none   &none                        &kp LG(LS(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)       &kp LG(Z)        &none
+&none  &trans  &trans  &trans  &trans  &none                        &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
+&none  &none   &none   &none   &none   &none   &trans    &trans     &none          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+               &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK      &trans          &trans          &trans
             >;
         };
 
         // === 3. NUMBERS LAYER ===
+
         num_layer {
             display-name = "numbers";
             bindings = <
-                &trans     &none      &none   &none   &none   &none                                &none          &none      &none      &none      &none      &none
-                &trans     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK                            &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-                &trans     &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                             &trans         &trans     &trans     &trans     &trans     &none
-                &trans     &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT    &trans    &trans        &none          &none      &none      &none      &none      &trans
-                                      &trans  &trans  &trans  &kp N0       &trans    &trans        &trans         &trans     &trans     &trans
+&none  &none      &none   &none   &none   &none                        &none          &none      &none      &none      &none      &none
+&none  &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
+&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                     &trans         &trans     &trans     &trans     &trans     &none
+&none  &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT  &trans    &trans  &none          &none      &none      &none      &none      &none
+                  &trans  &trans  &trans  &kp N0     &trans    &trans  &trans         &trans     &trans     &trans
             >;
         };
     };
