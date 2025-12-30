@@ -40,6 +40,34 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        // 1. Комбо для буквы "Х" (O + P)
+        // Шлет код '[', который в русской раскладке дает "х"
+        combo_kh {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // Индексы клавиш O и P на Sofle
+            bindings = <&kp LBKT>;
+        };
+
+        // 2. Комбо для буквы "Э" (L + ;)
+        // Шлет код ''', который в русской раскладке дает "э"
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <33 34>; // L + ; (Semicolon)
+            bindings = <&kp SQT>;
+        };
+
+        // 3. Комбо для Твердого знака "Ъ" (N + M)
+        // Шлет код ']', который в русской раскладке дает "ъ"
+        combo_hard_sign {
+            timeout-ms = <50>;
+            key-positions = <44 45>; // N + M
+            bindings = <&kp RBKT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
