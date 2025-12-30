@@ -66,6 +66,24 @@
             key-positions = <44 45>; // N + M
             bindings = <&kp RBKT>;
         };
+
+        // 4. Комбо для "Б" (M + Comma) -> Comma
+        // В русской раскладке &kp COMMA дает "б"
+        combo_be {
+            timeout-ms = <50>;
+            key-positions = <45 46>;
+            bindings = <&kp COMMA>;
+        };
+
+        // 5. Комбо для "Ю" (Comma + Dot) -> Dot
+        // В русской раскладке &kp DOT дает "ю"
+        combo_yu {
+            timeout-ms = <50>;
+            key-positions = <46 47>;
+            bindings = <&kp DOT>;
+        };
+
+
     };
 
     keymap {
@@ -80,7 +98,7 @@
 &none  &kp Q         &kp W        &kp E        &kp R          &kp T                                          &kp Y     &kp U          &kp I        &kp O        &kp P            &kp LBKT
 &none  &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F  &kp G                                          &kp H     &hrm LSHIFT J  &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI  &kp SQT
 &none  &kp Z         &kp X        &kp C        &kp V          &kp B          &kp C_MUTE       &none          &kp N     &kp M          &kp COMMA    &kp DOT      &kp GRAVE        &none
-                     &none        &kp ESCAPE   &kp LC(SPACE)  &lt MOUSE TAB  &lt NAV SPACE    &lt NUM ENTER  &kp BSPC  &kp DEL        &none        &none
+                     &none        &kp ESCAPE   &kp LC(SPACE)  &lt MOUSE TAB  &lt NAV SPACE    &lt NUM ENTER  &kp BSPC  &kp DEL        &kp NUBS     &kp INT3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
