@@ -85,8 +85,8 @@
             <key code="11" output="и"/>
             <key code="45" output="т"/>
             <key code="46" output="ь"/>
-            <key code="43" output="б"/>
-            <key code="47" output="ю"/>
+            <!--    <key code="43" output="б"/> -->
+            <!--    <key code="47" output="ю"/> -->
             <key code="44" output="."/>
 
             <!-- Layer-Base-0. Row 5 -->
@@ -95,6 +95,9 @@
             <key code="124" output="→"/>
             <key code="125" output="↓"/>
             <key code="126" output="↑"/>
+
+            <key code="10" output=","/>     <!-- ZMK: &kp NUBS -->
+            <key code="93" output="."/>    <!-- ZMK: &kp INT3 -->
         </keyMap>
 
         <keyMap index="1">
@@ -152,8 +155,8 @@
             <key code="11" output="И"/>
             <key code="45" output="Т"/>
             <key code="46" output="Ь"/>
-            <key code="43" output="Б"/>
-            <key code="47" output="Ю"/>
+            <!--    <key code="43" output="Б"/> -->
+            <!--    <key code="47" output="Ю"/> -->
             <key code="44" output=","/>
 
             <!-- Layer-Shift-1. Row 5 -->
@@ -162,6 +165,9 @@
             <key code="124" output="→"/>
             <key code="125" output="↓"/>
             <key code="126" output="↑"/>
+
+            <key code="10" output=";"/>     <!-- ZMK: &kp NUBS -->
+            <key code="93" output=":"/>    <!-- ZMK: &kp INT3 -->
         </keyMap>
 
         <keyMap index="2">
@@ -219,8 +225,8 @@
             <key code="11" output=""/> <!-- ∫ -->
             <key code="45" output=""/> <!-- ˜ -->
             <key code="46" output=""/> <!-- µ -->
-            <key code="43" output=""/> <!-- ≤ -->
-            <key code="47" output=""/> <!-- ≥ -->
+            <!--    <key code="43" output=""/>  -->  <!-- ≤ -->
+            <!--    <key code="47" output=""/>  -->  <!-- ≥ -->
             <key code="44" output=""/> <!-- ÷ -->
 
             <!-- Layer-Option-2. Row 5 -->
@@ -286,8 +292,8 @@
             <key code="11" output="b"/>
             <key code="45" output="n"/>
             <key code="46" output="m"/>
-            <key code="43" output=""/>
-            <key code="47" output=","/>
+            <!--    <key code="43" output=""/>  -->
+            <!--    <key code="47" output=","/> -->
             <key code="44" output="."/>
 
             <!-- Layer-Command-3. Row 5 -->

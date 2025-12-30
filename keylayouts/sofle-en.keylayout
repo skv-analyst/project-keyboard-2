@@ -80,8 +80,8 @@
             <key code="11" output="b"/>
             <key code="45" output="n"/>
             <key code="46" output="m"/>
-            <key code="43" output=","/>
-            <key code="47" output="."/>
+            <!--    <key code="43" output=","/>  -->
+            <!--    <key code="47" output="."/>  -->
             <key code="44" output="/"/>
 
             <!-- Layer-Base-0. Row 5 -->
@@ -90,6 +90,9 @@
             <key code="124" output="→"/>
             <key code="125" output="↓"/>
             <key code="126" output="↑"/>
+
+            <key code="10" output=","/>     <!-- ZMK: &kp NUBS -->
+            <key code="93" output="."/>    <!-- ZMK: &kp INT3 -->
         </keyMap>
 
         <keyMap index="1">
@@ -147,8 +150,8 @@
             <key code="11" output="B"/>
             <key code="45" output="N"/>
             <key code="46" output="M"/>
-            <key code="43" output="&#x003C;"/>  <!-- < -->
-            <key code="47" output="&#x003E;"/>  <!-- > -->
+            <!--    <key code="43" output="&#x003C;"/>  -->     <!-- < -->
+            <!--    <key code="47" output="&#x003E;"/>  -->     <!-- > -->
             <key code="44" output="?"/>
 
             <!-- Layer-Shift-1. Row 5 -->
@@ -157,6 +160,9 @@
             <key code="124" output="→"/>
             <key code="125" output="↓"/>
             <key code="126" output="↑"/>
+
+            <key code="10" output=";"/>     <!-- ZMK: &kp NUBS -->
+            <key code="93" output=":"/>    <!-- ZMK: &kp INT3 -->
         </keyMap>
 
         <keyMap index="2">
@@ -214,8 +220,8 @@
             <key code="11" output=""/> <!-- ∫ -->
             <key code="45" output=""/> <!-- ˜ -->
             <key code="46" output=""/> <!-- µ -->
-            <key code="43" output=""/> <!-- ≤ -->
-            <key code="47" output=""/> <!-- ≥ -->
+            <!--<key code="43" output=""/>  -->  <!-- ≤ -->
+            <!--<key code="47" output=""/>  -->  <!-- ≥ -->
             <key code="44" output=""/> <!-- ÷ -->
 
             <!-- Layer-Option-2. Row 5 -->
