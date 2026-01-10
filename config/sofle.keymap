@@ -88,6 +88,26 @@
             layers = <0>;
         };
 
+        // === КОМБО ДЛЯ СЛОЯ NUM (CODE) ===
+
+        // 1. Одинарная кавычка (')
+        // Комбинация: } + " (RBRC + DQT)
+        combo_sqt_num {
+            timeout-ms = <50>;
+            key-positions = <20 21>; // Индексы для I и O
+            bindings = <&kp SQT>;
+            layers = <3>;
+        };
+
+        // 2. Гравис / Бэктик (`)
+        // Комбинация: " + | (DQT + PIPE)
+        combo_grave_num {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // Индексы для O и P
+            bindings = <&kp GRAVE>;
+            layers = <3>;
+        };
+
 
     };
 
@@ -140,11 +160,11 @@
         num_layer {
             display-name = "numbers";
             bindings = <
-&none  &none         &none   &none   &none   &none                        &none          &none      &none      &none      &none      &none
-&none  &kp PLUS      &kp N7  &kp N8  &kp N9  &kp ASTRK                    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                     &trans         &trans     &trans     &trans     &trans     &none
-&none  &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT  &trans    &trans  &none          &none      &none      &none      &none      &none
-                     &trans  &trans  &trans  &kp N0     &trans    &trans  &trans         &trans     &trans     &trans
+&none  &none      &none   &none   &none   &none                        &none      &none     &none     &none      &none      &none
+&none  &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK                    &kp AMPS   &kp LBRC  &kp RBRC  &kp DQT    &kp PIPE   &none
+&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                     &kp UNDER  &kp LPAR  &kp RPAR  &kp COLON  &kp TILDE  &none
+&trans &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PRCNT  &trans    &trans  &kp CARET  &kp LBKT  &kp RBKT  &kp LT     &kp GT     &none
+                  &trans  &trans  &trans  &kp N0     &trans    &trans  &trans     &trans    &trans    &trans
             >;
         };
     };
