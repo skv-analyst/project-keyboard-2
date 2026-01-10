@@ -381,7 +381,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(812, 231)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">`</tspan><tspan x="0" dy="1.2em">Ё</tspan>
+<tspan x="0" dy="-1.2em">&#x27;</tspan><tspan x="0" dy="1.2em">&quot;</tspan><tspan x="0" dy="1.2em">`</tspan>
 </text>
 </g>
 <g transform="translate(868, 231)" class="key keypos-49">
@@ -679,36 +679,6 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g class="combo combopos-0">
-<rect rx="6" ry="6" x="770" y="92" width="28" height="26" class="combo"/>
-<text x="784" y="105" class="combo tap">
-<tspan x="784" dy="-0.6em">[</tspan><tspan x="784" dy="1.2em">Х</tspan>
-</text>
-</g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="770" y="148" width="28" height="26" class="combo"/>
-<text x="784" y="161" class="combo tap">
-<tspan x="784" dy="-0.6em">&#x27;</tspan><tspan x="784" dy="1.2em">Э</tspan>
-</text>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="602" y="194" width="28" height="26" class="combo"/>
-<text x="616" y="206" class="combo tap">
-<tspan x="616" dy="-0.6em">]</tspan><tspan x="616" dy="1.2em">Ъ</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="658" y="186" width="28" height="26" class="combo"/>
-<text x="672" y="200" class="combo tap">
-<tspan x="672" dy="-0.6em">,</tspan><tspan x="672" dy="1.2em">Б</tspan>
-</text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="714" y="186" width="28" height="26" class="combo"/>
-<text x="728" y="200" class="combo tap">
-<tspan x="728" dy="-0.6em">.</tspan><tspan x="728" dy="1.2em">Ю</tspan>
-</text>
-</g>
 </g>
 </g>
 <g transform="translate(30, 795)" class="layer-mouse">
@@ -942,36 +912,6 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g class="combo combopos-0">
-<rect rx="6" ry="6" x="770" y="92" width="28" height="26" class="combo"/>
-<text x="784" y="105" class="combo tap">
-<tspan x="784" dy="-0.6em">[</tspan><tspan x="784" dy="1.2em">Х</tspan>
-</text>
-</g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="770" y="148" width="28" height="26" class="combo"/>
-<text x="784" y="161" class="combo tap">
-<tspan x="784" dy="-0.6em">&#x27;</tspan><tspan x="784" dy="1.2em">Э</tspan>
-</text>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="602" y="194" width="28" height="26" class="combo"/>
-<text x="616" y="206" class="combo tap">
-<tspan x="616" dy="-0.6em">]</tspan><tspan x="616" dy="1.2em">Ъ</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="658" y="186" width="28" height="26" class="combo"/>
-<text x="672" y="200" class="combo tap">
-<tspan x="672" dy="-0.6em">,</tspan><tspan x="672" dy="1.2em">Б</tspan>
-</text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="714" y="186" width="28" height="26" class="combo"/>
-<text x="728" y="200" class="combo tap">
-<tspan x="728" dy="-0.6em">.</tspan><tspan x="728" dy="1.2em">Ю</tspan>
-</text>
-</g>
 </g>
 </g>
 <g transform="translate(30, 1193)" class="layer-numbers">
@@ -1198,36 +1138,6 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(756, 259)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
-</g>
-<g class="combo combopos-0">
-<rect rx="6" ry="6" x="770" y="92" width="28" height="26" class="combo"/>
-<text x="784" y="105" class="combo tap">
-<tspan x="784" dy="-0.6em">[</tspan><tspan x="784" dy="1.2em">Х</tspan>
-</text>
-</g>
-<g class="combo combopos-1">
-<rect rx="6" ry="6" x="770" y="148" width="28" height="26" class="combo"/>
-<text x="784" y="161" class="combo tap">
-<tspan x="784" dy="-0.6em">&#x27;</tspan><tspan x="784" dy="1.2em">Э</tspan>
-</text>
-</g>
-<g class="combo combopos-2">
-<rect rx="6" ry="6" x="602" y="194" width="28" height="26" class="combo"/>
-<text x="616" y="206" class="combo tap">
-<tspan x="616" dy="-0.6em">]</tspan><tspan x="616" dy="1.2em">Ъ</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="658" y="186" width="28" height="26" class="combo"/>
-<text x="672" y="200" class="combo tap">
-<tspan x="672" dy="-0.6em">,</tspan><tspan x="672" dy="1.2em">Б</tspan>
-</text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="714" y="186" width="28" height="26" class="combo"/>
-<text x="728" y="200" class="combo tap">
-<tspan x="728" dy="-0.6em">.</tspan><tspan x="728" dy="1.2em">Ю</tspan>
-</text>
 </g>
 </g>
 </g>

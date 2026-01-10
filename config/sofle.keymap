@@ -49,6 +49,7 @@
             timeout-ms = <50>;
             key-positions = <21 22>; // Индексы клавиш O и P на Sofle
             bindings = <&kp LBKT>;
+            layers = <0>;
         };
 
         // 2. Комбо для буквы "Э" (L + ;)
@@ -57,6 +58,7 @@
             timeout-ms = <50>;
             key-positions = <33 34>; // L + ; (Semicolon)
             bindings = <&kp SQT>;
+            layers = <0>;
         };
 
         // 3. Комбо для Твердого знака "Ъ" (N + M)
@@ -65,6 +67,7 @@
             timeout-ms = <50>;
             key-positions = <44 45>; // N + M
             bindings = <&kp RBKT>;
+            layers = <0>;
         };
 
         // 4. Комбо для "Б" (M + Comma) -> Comma
@@ -73,6 +76,7 @@
             timeout-ms = <50>;
             key-positions = <45 46>;
             bindings = <&kp COMMA>;
+            layers = <0>;
         };
 
         // 5. Комбо для "Ю" (Comma + Dot) -> Dot
@@ -81,6 +85,7 @@
             timeout-ms = <50>;
             key-positions = <46 47>;
             bindings = <&kp DOT>;
+            layers = <0>;
         };
 
 
