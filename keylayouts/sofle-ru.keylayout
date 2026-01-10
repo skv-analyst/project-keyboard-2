@@ -172,7 +172,7 @@
 
         <keyMap index="2">
             <!-- Layer-Option-2. Row 1 -->
-            <key code="50" output=""/> <!-- ` -->
+            <key code="50" output="`"/> <!-- ` -->
             <key code="18" output=""/> <!-- ¡ -->
             <key code="19" output=""/> <!-- ™ -->
             <key code="20" output="№"/> <!-- £ -->
@@ -239,19 +239,19 @@
 
         <keyMap index="3">
             <!-- Layer-Command-3. Row 1 -->
-            <key code="50" output="'"/>
-            <key code="18" output="!"/>
-            <key code="19" output="@"/>
-            <key code="20" output="#"/>
-            <key code="21" output="$"/>
-            <key code="23" output="%"/>
-            <key code="22" output="^"/>
-            <key code="26" output="?"/>
-            <key code="28" output="*"/>
-            <key code="25" output="("/>
-            <key code="29" output=")"/>
-            <key code="27" output="-"/>
-            <key code="24" output="="/>
+            <key code="50" output=""/> <!-- ' -->
+            <key code="18" output=""/> <!-- ! -->
+            <key code="19" output=""/> <!-- @ -->
+            <key code="20" output=""/> <!-- # -->
+            <key code="21" output=""/> <!-- $ -->
+            <key code="23" output=""/> <!-- % -->
+            <key code="22" output=""/> <!-- ^ -->
+            <key code="26" output=""/> <!-- ? -->
+            <key code="28" output=""/> <!-- * -->
+            <key code="25" output=""/> <!-- ( -->
+            <key code="29" output=""/> <!-- ) -->
+            <key code="27" output=""/> <!-- - -->
+            <key code="24" output=""/> <!-- = -->
             <key code="51" output="&#x0008;"/>  <!-- Backspace -->
 
             <!-- Layer-Command-3. Row 2 -->
