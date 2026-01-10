@@ -131,3 +131,7 @@ parse_config:
     # === СИСТЕМНЫЕ ===
     "&bootloader": "BOOT"
     "&sys_reset": "RESET"
+
+    # === СКРИНШОТЫ ===
+    "&kp LG(LS(N3))": "Screen Full"
+    "&kp LG(LS(N4))": "Screen Area"
