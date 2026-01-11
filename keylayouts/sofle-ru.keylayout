@@ -8,24 +8,24 @@
     </layouts>
 
     <modifierMap id="308" defaultIndex="0">
+        <!-- Layer-Base-0 -->
         <keyMapSelect mapIndex="0">
             <modifier keys=""/>
         </keyMapSelect>
 
-        <keyMapSelect mapIndex="3">
-            <modifier keys="command"/>
-            <modifier keys="command anyShift"/>
-            <modifier keys="command anyOption"/>
-            <modifier keys="command anyShift anyOption"/>
-        </keyMapSelect>
-
-        <keyMapSelect mapIndex="2">
-            <modifier keys="anyOption"/>
-            <modifier keys="anyOption anyShift"/>
-        </keyMapSelect>
-
+        <!-- Layer-Shift-1 -->
         <keyMapSelect mapIndex="1">
             <modifier keys="anyShift"/>
+        </keyMapSelect>
+
+        <!-- Layer-Option-2 -->
+        <keyMapSelect mapIndex="2">
+            <modifier keys="anyOption"/>
+        </keyMapSelect>
+
+        <!-- Layer-Command-3 -->
+        <keyMapSelect mapIndex="3">
+            <modifier keys="command"/>
         </keyMapSelect>
     </modifierMap>
 
