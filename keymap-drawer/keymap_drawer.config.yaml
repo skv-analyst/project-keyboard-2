@@ -137,7 +137,17 @@ parse_config:
     "&kp LG(LS(N4))": "Screen Area"
 
     # === CODE LAYER (Option Mapped) ===
-    "&kp RA(Y)": "?"
+    # === ЛЕВАЯ РУКА (Calc - Option Mapped) ===
+    "&kp RA(Q)": "+"
+    "&kp RA(T)": "*"
+    "&kp RA(A)": "-"
+    "&kp RA(G)": "/"
+    "&kp RA(Z)": "="
+    "&kp RA(B)": "%"
+    "&kp RA(V)": "."
+
+    # === ПРАВАЯ РУКА (Code - Option Mapped) ===
+    "&kp RA(Y)": "&"
     "&kp RA(U)": "{"
     "&kp RA(I)": "}"
     "&kp RA(O)": "\""
