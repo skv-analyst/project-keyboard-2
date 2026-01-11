@@ -83,7 +83,7 @@
         };
 
         // 3. Combo for the letter ";" ("l" + ";")
-        combo_num_grave {
+        combo_num_semi {
             timeout-ms = <50>;
             key-positions = <33 34>; // Key indexes on Sofle
             bindings = <&kp RA(S)>;
