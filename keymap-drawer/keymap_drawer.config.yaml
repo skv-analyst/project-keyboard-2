@@ -135,3 +135,22 @@ parse_config:
     # === СКРИНШОТЫ ===
     "&kp LG(LS(N3))": "Screen Full"
     "&kp LG(LS(N4))": "Screen Area"
+
+    # === CODE LAYER (Option Mapped) ===
+    "&kp RA(Y)": "?"
+    "&kp RA(U)": "{"
+    "&kp RA(I)": "}"
+    "&kp RA(O)": "\""
+    "&kp RA(P)": "|"
+
+    "&kp RA(H)": "_"
+    "&kp RA(J)": "("
+    "&kp RA(K)": ")"
+    "&kp RA(L)": ":"
+    "&kp RA(SEMI)": "'"
+
+    "&kp RA(N)": "^"
+    "&kp RA(M)": "["
+    "&kp RA(COMMA)": "]"
+    "&kp RA(DOT)": "<"
+    "&kp RA(FSLH)": ">"
