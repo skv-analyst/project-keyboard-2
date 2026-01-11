@@ -157,11 +157,18 @@ parse_config:
     "&kp RA(J)": "("
     "&kp RA(K)": ")"
     "&kp RA(L)": ":"
-    "&kp RA(SEMI)": "'"
+    "&kp RA(SEMI)": "!"
 
     "&kp RA(N)": "^"
     "&kp RA(M)": "["
     "&kp RA(COMMA)": "]"
     "&kp RA(DOT)": "<"
     "&kp RA(FSLH)": ">"
+
+    # === КОМБО ===
+    "&kp RA(SQT)": "'"
     "&kp RA(GRAVE)": "`"
+    "&kp RA(S)": ";"
+    "&kp RA(W)": "@"
+    "&kp RA(E)": "#"
+    "&kp RA(R)": "$"

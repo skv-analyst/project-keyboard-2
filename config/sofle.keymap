@@ -66,11 +66,54 @@
         };
 
         // === COMBO FOR THE LAYER NUM ===
-        // 1. Combo for the letter "`" ("l" + ";")
+        // 1. Combo for the letter "'" ("i" + "o")
+        combo_num_sqt {
+            timeout-ms = <50>;
+            key-positions = <20 21>; // I + O
+            bindings = <&kp RA(SQT)>;
+            layers = <3>;
+        };
+
+        // 2. Combo for the letter "`" ("o" + "p")
+        combo_num_grave {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // Key indexes on Sofle
+            bindings = <&kp RA(GRAVE)>;
+            layers = <3>;
+        };
+
+        // 3. Combo for the letter ";" ("l" + ";")
         combo_num_grave {
             timeout-ms = <50>;
             key-positions = <33 34>; // Key indexes on Sofle
-            bindings = <&kp RA(GRAVE)>;
+            bindings = <&kp RA(S)>;
+            layers = <3>;
+        };
+
+        // 4. Combo for the letter "@" ("u" + "i")
+        // ZMK: Option + W (code 13) -> XML: @
+        combo_num_at {
+            timeout-ms = <50>;
+            key-positions = <19 20>; // Key indexes on Sofle
+            bindings = <&kp RA(W)>;
+            layers = <3>;
+        };
+
+        // 5. Combo for the letter "#" ("j" + "k")
+        // ZMK: Option + E (code 14) -> XML: #
+        combo_num_hash {
+            timeout-ms = <50>;
+            key-positions = <31 32>; // Key indexes on Sofle
+            bindings = <&kp RA(E)>;
+            layers = <3>;
+        };
+
+        // 6. Combo for the letter "$" ("m" + ",")
+        // ZMK: Option + R (code 15) -> XML: $
+        combo_num_dollar {
+            timeout-ms = <50>;
+            key-positions = <45 46>; // Key indexes on Sofle
+            bindings = <&kp RA(R)>;
             layers = <3>;
         };
     };
@@ -125,7 +168,7 @@
             display-name = "numbers";
             bindings = <
                 &none  &none      &none   &none   &none   &none                        &none          &none        &none         &none         &none          &none
-                &none  &kp RA(Q)   &kp N7  &kp N8  &kp N9  &kp RA(T)                    &kp RA(Y)      &kp RA(U)    &kp RA(I)     &kp RA(O)     &kp RA(P)      &none
+                &none  &kp RA(Q)  &kp N7  &kp N8  &kp N9  &kp RA(T)                    &kp RA(Y)      &kp RA(U)    &kp RA(I)     &kp RA(O)     &kp RA(P)      &none
                 &none  &kp RA(A)  &kp N4  &kp N5  &kp N6  &kp RA(G)                    &kp RA(H)      &kp RA(J)    &kp RA(K)     &kp RA(L)     &kp RA(SEMI)   &none
                 &none  &kp RA(Z)  &kp N1  &kp N2  &kp N3  &kp RA(B)  &trans    &trans  &kp RA(N)      &kp RA(M)    &kp RA(COMMA) &kp RA(DOT)   &kp RA(FSLH)   &none
                                   &trans  &trans  &kp RA(V) &kp N0     &trans    &trans  &trans         &trans       &trans        &trans
