@@ -164,3 +164,4 @@ parse_config:
     "&kp RA(COMMA)": "]"
     "&kp RA(DOT)": "<"
     "&kp RA(FSLH)": ">"
+    "&kp RA(GRAVE)": "`"
