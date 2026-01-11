@@ -101,7 +101,7 @@ parse_config:
     "&kp DOT": ". Ю"
     "&kp FSLH": "/ ."
     "&kp BSLH": "\\"
-    "&kp GRAVE": "' \" `" # Shift Base Option
+    "&kp GRAVE": "' \" `"
     "&kp MINUS": "- _"
     "&kp EQUAL": "= +"
     "&kp LEFT_BRACKET": "[ Х"
