@@ -42,7 +42,7 @@
 
         // === COMBO FOR THE LAYER BASE ===
         // 1. Combo for the Russian letter "х" ("щ" + "з")
-        combo_kh {
+        combo_base_ru_kh {
             timeout-ms = <50>;
             key-positions = <21 22>; // Key indexes on Sofle
             bindings = <&kp LBKT>;
@@ -50,7 +50,7 @@
         };
 
         // 2. Combo for the Russian letter "э" ("д" + "ж")
-        combo_ae {
+        combo_base_ru_ae {
             timeout-ms = <50>;
             key-positions = <33 34>; // Key indexes on Sofle
             bindings = <&kp SQT>;
@@ -58,7 +58,7 @@
         };
 
         // 3. Combo for the Russian letter "ъ" ("т" + "ь")
-        combo_hard_sign {
+        combo_base_ru_hard_sign {
             timeout-ms = <50>;
             key-positions = <44 45>; // Key indexes on Sofle
             bindings = <&kp RBKT>;
@@ -66,11 +66,11 @@
         };
 
         // === COMBO FOR THE LAYER NUM ===
-        // 1. Combo for the Russian letter "`" ("l" + ";")
-        combo_grave_num {
+        // 1. Combo for the letter "`" ("l" + ";")
+        combo_num_grave {
             timeout-ms = <50>;
             key-positions = <33 34>; // Key indexes on Sofle
-            bindings = <&kp GRAVE>;
+            bindings = <&kp RA(GRAVE)>;
             layers = <3>;
         };
     };
