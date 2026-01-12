@@ -132,9 +132,10 @@ parse_config:
     "&bootloader": "BOOT"
     "&sys_reset": "RESET"
 
-    # === СКРИНШОТЫ ===
+    # === NAV LAYER ===
     "&kp LG(LS(N3))": "Screen Full"
     "&kp LG(LS(N4))": "Screen Area"
+    "&kp LG(FSLH)": "Comment //"
 
     # === CODE LAYER (Option Mapped) ===
     # === ЛЕВАЯ РУКА (Calc - Option Mapped) ===
