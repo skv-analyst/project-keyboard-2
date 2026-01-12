@@ -5,16 +5,20 @@ draw_config:
   n_columns: 1
   dark_mode: auto
 
+  # Необязательно, но улучшает читаемость комбо
+  arc_radius: 6.0
+
 parse_config:
   zmk_preamble: |
     #define BASE 0
     #define NAV  1
     #define MOUSE 2
     #define NUM  3
-    #define SYM  4
 
   raw_binding_map:
-    # === БАЗОВЫЕ КЛАВИШИ ===
+    # ==========================================
+    # 1. БАЗОВЫЕ КЛАВИШИ И МОДИФИКАТОРЫ
+    # ==========================================
     "&kp ESC": "ESC"
     "&kp BSPC": "⌫"
     "&kp DEL": "DEL"
@@ -29,42 +33,13 @@ parse_config:
     "&kp TAB": "Tab"
     "&kp ENTER": "Enter"
     "&kp SPACE": "␣"
-
-    # === ШОРТКАТЫ (MAC OS) ===
-    "&kp LG(LS(Z))": "Redo"
-    "&kp LG(V)": "Paste"
-    "&kp LG(C)": "Copy"
-    "&kp LG(X)": "Cut"
-    "&kp LG(Z)": "Undo"
     "&kp CAPSLOCK": "Caps"
-    "&kp INS": "Insert"
-    "&kp HOME": "Home"
-    "&kp END": "End"
-    "&kp PG_UP": "PgUp"
-    "&kp PG_DN": "PgDn"
-    "&kp LEFT": "←"
-    "&kp DOWN": "↓"
-    "&kp UP": "↑"
-    "&kp RIGHT": "→"
+    "&bootloader": "BOOT"
+    "&sys_reset": "RESET"
 
-    # === МЫШЬ (ДВИЖЕНИЕ) ===
-    "&mmv MOVE_LEFT": "Ms ←"
-    "&mmv MOVE_DOWN": "Ms ↓"
-    "&mmv MOVE_UP": "Ms ↑"
-    "&mmv MOVE_RIGHT": "Ms →"
-
-    # === МЫШЬ (СКРОЛЛ) ===
-    "&msc SCRL_LEFT": "Scr ←"
-    "&msc SCRL_DOWN": "Scr ↓"
-    "&msc SCRL_UP": "Scr ↑"
-    "&msc SCRL_RIGHT": "Scr →"
-
-    # === МЫШЬ (КЛИКИ) ===
-    "&mkp LCLK": "L Click"
-    "&mkp RCLK": "R Click"
-    "&mkp MCLK": "M Click"
-
-    # === БУКВЫ (EN RU) ===
+    # ==========================================
+    # 2. БУКВЫ (ДВОЙНЫЕ ЛЕГЕНДЫ EN RU)
+    # ==========================================
     "&kp Q": "Q Й"
     "&kp W": "W Ц"
     "&kp E": "E У"
@@ -92,7 +67,10 @@ parse_config:
     "&kp N": "N Т"
     "&kp M": "M Ь"
 
-    # === ЗНАКИ ПРЕПИНАНИЯ ===
+    # ==========================================
+    # 3. ЗНАКИ ПРЕПИНАНИЯ (BASE LAYER)
+    # ==========================================
+    # Формат: "Shift Base" (или триплет, если влезает)
     "&kp LBKT": "[ Х"
     "&kp RBKT": "] Ъ"
     "&kp SEMI": "; Ж"
@@ -101,72 +79,97 @@ parse_config:
     "&kp DOT": ". Ю"
     "&kp FSLH": "/ ."
     "&kp BSLH": "\\"
-    "&kp GRAVE": "' \" `"
+    "&kp GRAVE": "' \" `"  # кастомная клавиша
     "&kp MINUS": "- _"
     "&kp EQUAL": "= +"
-    "&kp LEFT_BRACKET": "[ Х"
 
-    # === СИМВОЛЫ ===
-    "&kp EXCL": "!"
-    "&kp AT": "@"
-    "&kp HASH": "#"
-    "&kp DLLR": "$"
-    "&kp PRCNT": "%"
-    "&kp CARET": "^"
-    "&kp AMPS": "&"
-    "&kp ASTRK": "*"
-    "&kp LPAR": "("
-    "&kp RPAR": ")"
-    "&kp UNDER": "_"
+    # "Призрачные" клавиши для хардкода . и ,
+    "&kp NUBS": "< ,"
+    "&kp INT3": "> ."
+
+    # ==========================================
+    # 4. СЛОЙ NAV & MOUSE & MEDIA
+    # ==========================================
+    "&kp LG(LS(Z))": "Redo"
+    "&kp LG(V)": "Paste"
+    "&kp LG(C)": "Copy"
+    "&kp LG(X)": "Cut"
+    "&kp LG(Z)": "Undo"
+
+    "&kp INS": "Insert"
+    "&kp HOME": "Home"
+    "&kp END": "End"
+    "&kp PG_UP": "PgUp"
+    "&kp PG_DN": "PgDn"
+    "&kp LEFT": "←"
+    "&kp DOWN": "↓"
+    "&kp UP": "↑"
+    "&kp RIGHT": "→"
+
+    "&kp LG(LS(N3))": "Scr Full"
+    "&kp LG(LS(N4))": "Scr Area"
+    "&kp LG(FSLH)": "IDE Comment Code"
+
+    "&mmv MOVE_LEFT": "Ms ←"
+    "&mmv MOVE_DOWN": "Ms ↓"
+    "&mmv MOVE_UP": "Ms ↑"
+    "&mmv MOVE_RIGHT": "Ms →"
+    "&msc SCRL_LEFT": "Scr ←"
+    "&msc SCRL_DOWN": "Scr ↓"
+    "&msc SCRL_UP": "Scr ↑"
+    "&msc SCRL_RIGHT": "Scr →"
+    "&mkp LCLK": "L Click"
+    "&mkp RCLK": "R Click"
+    "&mkp MCLK": "M Click"
+    "&kp C_VOL_UP": "Vol +"
+    "&kp C_VOL_DN": "Vol -"
+    "&kp C_MUTE": "Mute"
+
+    # ==========================================
+    # 5. СЛОЙ NUM (ЛЕВАЯ РУКА - CALC)
+    # ==========================================
+    # Здесь используем стандартные коды (не RA)
     "&kp PLUS": "+"
-    "&kp LBRC": "{"
-    "&kp RBRC": "}"
-    "&kp PIPE": "|"
-    "&kp COLON": ":"
-    "&kp DQT": '"'
-    "&kp LT": "<"
-    "&kp GT": ">"
-    "&kp QMARK": "?"
+    "&kp MINUS": "-"
+    "&kp ASTRK": "*"
+    "&kp EQUAL": "="
+    "&kp PRCNT": "%"
 
-    # === СИСТЕМНЫЕ ===
-    "&bootloader": "BOOT"
-    "&sys_reset": "RESET"
-
-    # === NAV LAYER ===
-    "&kp LG(LS(N3))": "Screen Full"
-    "&kp LG(LS(N4))": "Screen Area"
-    "&kp LG(FSLH)": "Comment //"
-
-    # === CODE LAYER (Option Mapped) ===
-    # === ЛЕВАЯ РУКА (Calc - Option Mapped) ===
-    "&kp RA(Q)": "+"
-    "&kp RA(T)": "*"
-    "&kp RA(A)": "-"
+    # Исключения на Option
     "&kp RA(G)": "/"
-    "&kp RA(Z)": "="
-    "&kp RA(B)": "%"
     "&kp RA(V)": "."
 
-    # === ПРАВАЯ РУКА (Code - Option Mapped) ===
+    # ==========================================
+    # 6. СЛОЙ NUM (ПРАВАЯ РУКА - CODE)
+    # ==========================================
+    # Ряд 1 (Y U I O P) -> & { } " |
     "&kp RA(Y)": "&"
     "&kp RA(U)": "{"
     "&kp RA(I)": "}"
     "&kp RA(O)": "\""
     "&kp RA(P)": "|"
 
-    "&kp RA(H)": "_"
+    # Ряд 2 (H J K L ;) -> _ ( ) : !
+    "&kp UNDER": "_"    # Вернули стандартный код
     "&kp RA(J)": "("
     "&kp RA(K)": ")"
     "&kp RA(L)": ":"
     "&kp RA(SEMI)": "!"
 
+    # Ряд 3 (N M , . /) -> ^ [ ] < >
     "&kp RA(N)": "^"
     "&kp RA(M)": "["
     "&kp RA(COMMA)": "]"
     "&kp RA(DOT)": "<"
     "&kp RA(FSLH)": ">"
 
-    # === КОМБО ===
+    # ==========================================
+    # 7. КОМБО (COMBOS)
+    # ==========================================
+    # Русские буквы
+    "&kp LBKT": "[ Х" # Используется и как кнопка, и как результат комбо
+
+    # Символы на слое NUM
     "&kp RA(SQT)": "'"
     "&kp RA(GRAVE)": "`"
     "&kp RA(S)": ";"
