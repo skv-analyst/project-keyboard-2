@@ -67,7 +67,7 @@
 
         // === COMBO FOR THE LAYER NUM ===
         // 1. Combo for the letter "\" ("f" + "g")
-        // ZMK: Option + F (code 3) -> XML: \
+        // ZMK: Option + F (code 3) -> XML: "\"
         combo_num_bslh {
             timeout-ms = <50>;
             key-positions = <28 29>;
@@ -76,7 +76,7 @@
         };
 
         // 2. Combo for the letter "~" ("y" + "u")
-        // ZMK: Option + D (code 2) -> XML: ~
+        // ZMK: Option + D (code 2) -> XML: "~"
         combo_num_tilde {
             timeout-ms = <50>;
             key-positions = <18 19>;
@@ -85,7 +85,7 @@
         };
 
         // 3. Combo for the letter "@" ("u" + "i")
-        // ZMK: Option + W (code 13) -> XML: @
+        // ZMK: Option + W (code 13) -> XML: "@"
         combo_num_at {
             timeout-ms = <50>;
             key-positions = <19 20>;
@@ -110,7 +110,7 @@
         };
 
         // 6. Combo for the letter "#" ("j" + "k")
-        // ZMK: Option + E (code 14) -> XML: #
+        // ZMK: Option + E (code 14) -> XML: "#"
         combo_num_hash {
             timeout-ms = <50>;
             key-positions = <31 32>;
@@ -127,7 +127,7 @@
         };
 
         // 8. Combo for the letter "$" ("m" + ",")
-        // ZMK: Option + R (code 15) -> XML: $
+        // ZMK: Option + R (code 15) -> XML: "$"
         combo_num_dollar {
             timeout-ms = <50>;
             key-positions = <45 46>;
