@@ -44,7 +44,7 @@
         // 1. Combo for the Russian letter "х" ("щ" + "з")
         combo_base_ru_kh {
             timeout-ms = <50>;
-            key-positions = <19 20>; // Key indexes on Sofle
+            key-positions = <19 20>;
             bindings = <&kp LBKT>;
             layers = <0>;
         };
@@ -52,7 +52,7 @@
         // 2. Combo for the Russian letter "э" ("д" + "ж")
         combo_base_ru_ae {
             timeout-ms = <50>;
-            key-positions = <31 32>; // Key indexes on Sofle
+            key-positions = <31 32>;
             bindings = <&kp SQT>;
             layers = <0>;
         };
@@ -60,59 +60,77 @@
         // 3. Combo for the Russian letter "ъ" ("т" + "ь")
         combo_base_ru_hard_sign {
             timeout-ms = <50>;
-            key-positions = <45 46>; // Key indexes on Sofle
+            key-positions = <45 46>;
             bindings = <&kp RBKT>;
             layers = <0>;
         };
 
         // === COMBO FOR THE LAYER NUM ===
-        // 1. Combo for the letter "'" ("i" + "o")
-        combo_num_sqt {
+        // 1. Combo for the letter "\" ("f" + "g")
+        // ZMK: Option + F (code 3) -> XML: \
+        combo_num_bslh {
             timeout-ms = <50>;
-            key-positions = <20 21>; // I + O
-            bindings = <&kp RA(SQT)>;
+            key-positions = <28 29>;
+            bindings = <&kp RA(F)>;
             layers = <3>;
         };
 
-        // 2. Combo for the letter "`" ("o" + "p")
-        combo_num_grave {
+        // 2. Combo for the letter "~" ("y" + "u")
+        // ZMK: Option + D (code 2) -> XML: ~
+        combo_num_tilde {
             timeout-ms = <50>;
-            key-positions = <21 22>; // Key indexes on Sofle
-            bindings = <&kp RA(GRAVE)>;
+            key-positions = <18 19>;
+            bindings = <&kp RA(D)>;
             layers = <3>;
         };
 
-        // 3. Combo for the letter ";" ("l" + ";")
-        combo_num_semi {
-            timeout-ms = <50>;
-            key-positions = <33 34>; // Key indexes on Sofle
-            bindings = <&kp RA(S)>;
-            layers = <3>;
-        };
-
-        // 4. Combo for the letter "@" ("u" + "i")
+        // 3. Combo for the letter "@" ("u" + "i")
         // ZMK: Option + W (code 13) -> XML: @
         combo_num_at {
             timeout-ms = <50>;
-            key-positions = <19 20>; // Key indexes on Sofle
+            key-positions = <19 20>;
             bindings = <&kp RA(W)>;
             layers = <3>;
         };
 
-        // 5. Combo for the letter "#" ("j" + "k")
+        // 4. Combo for the letter "'" ("i" + "o")
+        combo_num_sqt {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp RA(SQT)>;
+            layers = <3>;
+        };
+
+        // 5. Combo for the letter "`" ("o" + "p")
+        combo_num_grave {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp RA(GRAVE)>;
+            layers = <3>;
+        };
+
+        // 6. Combo for the letter "#" ("j" + "k")
         // ZMK: Option + E (code 14) -> XML: #
         combo_num_hash {
             timeout-ms = <50>;
-            key-positions = <31 32>; // Key indexes on Sofle
+            key-positions = <31 32>;
             bindings = <&kp RA(E)>;
             layers = <3>;
         };
 
-        // 6. Combo for the letter "$" ("m" + ",")
+        // 7. Combo for the letter ";" ("l" + ";")
+        combo_num_semi {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RA(S)>;
+            layers = <3>;
+        };
+
+        // 8. Combo for the letter "$" ("m" + ",")
         // ZMK: Option + R (code 15) -> XML: $
         combo_num_dollar {
             timeout-ms = <50>;
-            key-positions = <45 46>; // Key indexes on Sofle
+            key-positions = <45 46>;
             bindings = <&kp RA(R)>;
             layers = <3>;
         };

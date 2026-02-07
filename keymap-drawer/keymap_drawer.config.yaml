@@ -176,3 +176,5 @@ parse_config:
     "&kp RA(W)": "@"
     "&kp RA(E)": "#"
     "&kp RA(R)": "$"
+    "&kp RA(D)": "~"
+    "&kp RA(F)": "\\"
