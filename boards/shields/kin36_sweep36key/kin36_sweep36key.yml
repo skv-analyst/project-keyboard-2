@@ -1,0 +1,13 @@
+file_format: "1"
+id: cradio
+name: pekorali/zmk-kin36-sweep36-swoop36-diodless-matrix-firmware
+type: shield
+url: https://github.com/pekorali/zmk-kin36-sweep36-swoop36-diodless-matrix-firmware
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - studio
+siblings:
+  - kin36_sweep36key_left
+  - kin36_sweep36key_right

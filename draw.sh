@@ -5,10 +5,12 @@ set -e
 
 # === НАСТРОЙКИ ПУТЕЙ ===
 DIR="keymap-drawer"
+# Если конфиг лежит в корне, а не в папке, раскомментируй нижнюю строку и закомментируй текущую:
+# CONFIG="keymap_drawer.config.yaml"
 CONFIG="$DIR/keymap_drawer.config.yaml"
-KEYMAP="config/sofle.keymap"
-PARSED="$DIR/sofle_parsed.yaml"
-OUTPUT="$DIR/sofle.svg"
+KEYMAP="config/kin36_sweep36key.keymap"
+PARSED="$DIR/kin36_parsed.yaml"
+OUTPUT="$DIR/kin36.svg"
 
 echo "🎨 Начинаю генерацию схемы..."
 
@@ -24,9 +26,7 @@ mkdir -p "$DIR"
 # Проверка: существует ли конфиг?
 if [ ! -f "$CONFIG" ]; then
     echo "❌ ОШИБКА: Не найден файл конфига: $CONFIG"
-    echo "   Пожалуйста, убедись, что файл лежит в папке $DIR"
-    echo "   Содержимое папки $DIR:"
-    ls -1 "$DIR"
+    echo "   Пожалуйста, убедись, что файл лежит по правильному пути"
     exit 1
 fi
 
@@ -36,7 +36,8 @@ keymap -c "$CONFIG" parse -z "$KEYMAP" > "$PARSED"
 
 # 3. Рисуем
 echo "🖌️  Рисование SVG..."
-keymap -c "$CONFIG" draw --qmk-keyboard sofle/rev1 --qmk-layout LAYOUT "$PARSED" > "$OUTPUT"
+# Используем физический макет crkbd (Corne) в модификации 3x5+3
+keymap -c "$CONFIG" draw --qmk-keyboard crkbd/rev1 --qmk-layout LAYOUT_split_3x5_3 "$PARSED" > "$OUTPUT"
 
 # 4. Убираем мусор
 rm "$PARSED"

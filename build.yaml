@@ -20,8 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: sofle_left
+    shield: kin36_sweep36key_left
   - board: nice_nano_v2
-    shield: sofle_right
-  - board: nice_nano_v2
-    shield: settings_reset
+    shield: kin36_sweep36key_right

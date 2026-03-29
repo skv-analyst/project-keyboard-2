@@ -1,0 +1,11 @@
+/*
+ * Copyright (c) 2025 Iosif Pravets
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "kin36_sweep36key.dtsi"
+
+&default_transform {
+    col-offset = <18>;
+};
