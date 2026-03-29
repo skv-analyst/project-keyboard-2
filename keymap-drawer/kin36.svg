@@ -328,16 +328,14 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(168, 205)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">Tab</text>
-</g>
-<g transform="translate(230, 213) rotate(15.0)" class="key keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Ctl+</tspan><tspan x="0" dy="1.2em">SPACE</tspan>
-</text>
+<text x="0" y="0" class="key tap">ESC</text>
 <a href="#mouse">
 <text x="0" y="24" class="key hold layer-activator">mouse</text>
 </a></g>
+<g transform="translate(230, 213) rotate(15.0)" class="key keypos-31">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">Tab</text>
+</g>
 <g transform="translate(295, 224) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">␣</text>
@@ -356,7 +354,9 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(560, 205)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">DEL</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">&gt;</tspan><tspan x="0" dy="1.2em">.</tspan>
+</text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="546" y="18" width="28" height="26" class="combo"/>
@@ -374,6 +374,18 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo"/>
 <text x="560" y="144" class="combo tap">
 <tspan x="560" dy="-0.6em">]</tspan><tspan x="560" dy="1.2em">Ъ</tspan>
+</text>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="248" y="206" width="28" height="26" class="combo"/>
+<text x="262" y="219" class="combo tap">
+<tspan x="262" dy="-0.6em">Ctl+</tspan><tspan x="262" dy="1.2em">SPACE</tspan>
+</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="515" y="196" width="28" height="26" class="combo"/>
+<text x="529" y="209" class="combo tap">
+<tspan x="529" dy="-0.6em">&lt;</tspan><tspan x="529" dy="1.2em">,</tspan>
 </text>
 </g>
 </g>
@@ -650,12 +662,12 @@ path.combo { stroke: #7f7f7f; }
 <tspan x="0" dy="-0.6em">Scr</tspan><tspan x="0" dy="1.2em">→</tspan>
 </text>
 </g>
-<g transform="translate(168, 205)" class="key trans keypos-30">
+<g transform="translate(168, 205)" class="key held keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
+</g>
+<g transform="translate(230, 213) rotate(15.0)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
-</g>
-<g transform="translate(230, 213) rotate(15.0)" class="key held keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(295, 224) rotate(30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
@@ -802,13 +814,13 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">&gt;</text>
 </g>
-<g transform="translate(168, 205)" class="key keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">0</text>
+<g transform="translate(168, 205)" class="key trans keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(230, 213) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">.</text>
+<text x="0" y="0" class="key tap">0</text>
 </g>
 <g transform="translate(295, 224) rotate(30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>

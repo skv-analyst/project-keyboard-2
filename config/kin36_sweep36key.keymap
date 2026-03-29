@@ -141,6 +141,14 @@
             bindings = <&kp LC(SPACE)>;
             layers = <0>;
         };
+
+        // Combo for the ","
+        combo_comma {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&kp NUBS>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -153,7 +161,7 @@
                 &kp Q        &kp W        &kp E        &kp R        &kp T                                           &kp Y        &kp U        &kp I        &kp O        &kp P
                 &hrm LCTRL A &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F &kp G                                          &kp H        &hrm LSHIFT J &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI
                 &kp Z        &kp X        &kp C        &kp V        &kp B                                           &kp N        &kp M        &kp COMMA    &kp DOT      &kp GRAVE
-                                          &lt MOUSE ESC    &kp TAB  &lt NAV SPACE                                   &lt NUM ENTER &kp BSPC     &kp DEL
+                                          &lt MOUSE ESC    &kp TAB  &lt NAV SPACE                                   &lt NUM ENTER &kp BSPC    &kp INT3
             >;
         };
 
@@ -186,7 +194,7 @@
                 &kp PLUS     &kp N7       &kp N8       &kp N9       &kp ASTRK                                       &kp RA(Y)    &kp RA(U)    &kp RA(I)    &kp RA(O)    &kp RA(P)
                 &kp MINUS    &kp N4       &kp N5       &kp N6       &kp RA(G)                                       &kp UNDER    &kp RA(J)    &kp RA(K)    &kp RA(L)    &kp RA(SEMI)
                 &kp EQUAL    &kp N1       &kp N2       &kp N3       &kp PRCNT                                       &kp RA(N)    &kp RA(M)    &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)
-                                          &kp N0       &kp RA(V)    &trans                                          &trans       &trans       &trans
+                                          &trans       &kp N0       &trans                                          &trans       &trans       &trans
             >;
         };
     };
