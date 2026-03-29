@@ -36,3 +36,33 @@
 **1. Копируем раскладки в систему**
 ```bash
 cp keylayouts/*.keylayout ~/Library/Keyboard\ Layouts/
+```
+
+**2. Бекап перед изменением системы** 
+```bash 
+cp ~/Library/Preferences/com.apple.HIToolbox.plist ~/Library/Preferences/com.apple.HIToolbox.plist.bak
+```
+
+**3. Жесткая активация через HIToolbox** 
+Добавляем раскладки напрямую в конфиг, так как macOS агрессивно кэширует настройки и может не увидеть изменения через GUI.
+```bash
+defaults write ~/Library/Preferences/com.apple.HIToolbox AppleEnabledInputSources -array \
+  '{"InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = 35350; "KeyboardLayout Name" = "sofle-en"; }' \
+  '{"InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = 35351; "KeyboardLayout Name" = "sofle-ru"; }' \
+  '{"Bundle ID" = "com.apple.CharacterPaletteIM"; InputSourceKind = "Non Keyboard Input Method"; }'
+```
+
+**4. Перезагрузка**
+Изменения вступят в силу только после перезагрузки системы. Выход из учетной записи (Log out) часто не помогает обновить кэш демона ввода.
+
+**5. Проверка** После перезагрузки убедитесь, что в списке источников ввода появились кастомные раскладки:
+```bash
+defaults read ~/Library/Preferences/com.apple.HIToolbox AppleEnabledInputSources
+```
+
+## ✨ Актуальная схема слоев
+Для генерации схемы используется keymap-drawer. Чтобы обновить картинку локально, запустите `./draw.sh`
+
+<p align="center">
+  <img src="keymap-drawer/kin36.svg" alt="Keymap Layout" width="100%">
+</p>
