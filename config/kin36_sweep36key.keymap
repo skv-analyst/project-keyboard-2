@@ -133,6 +133,14 @@
             bindings = <&kp RA(R)>;
             layers = <3>;
         };
+
+        // 9. Combo for the change language
+        combo_lang {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp LC(SPACE)>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -145,7 +153,7 @@
                 &kp Q        &kp W        &kp E        &kp R        &kp T                                           &kp Y        &kp U        &kp I        &kp O        &kp P
                 &hrm LCTRL A &hrm LALT S  &hrm LGUI D  &hrm LSHIFT F &kp G                                          &kp H        &hrm LSHIFT J &hrm LGUI K  &hrm LALT L  &hrm LCTRL SEMI
                 &kp Z        &kp X        &kp C        &kp V        &kp B                                           &kp N        &kp M        &kp COMMA    &kp DOT      &kp GRAVE
-                                          &kp TAB      &lt MOUSE LC(SPACE) &lt NAV SPACE                            &lt NUM ENTER &kp BSPC     &kp DEL
+                                          &lt MOUSE ESC    &kp TAB  &lt NAV SPACE                                   &lt NUM ENTER &kp BSPC     &kp DEL
             >;
         };
 
