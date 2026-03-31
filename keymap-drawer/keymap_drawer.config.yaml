@@ -90,6 +90,7 @@ parse_config:
     # ==========================================
     # 4. СЛОЙ NAV & MOUSE & MEDIA
     # ==========================================
+    "&kp LG(LC(Q))": "logOut"
     "&kp LG(LS(Z))": "Redo"
     "&kp LG(V)": "Paste"
     "&kp LG(C)": "Copy"
